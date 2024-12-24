@@ -1,4 +1,4 @@
-//Primitive datatypes
+//Primitive datatypes(call by value)
 let num = 1;            
 let myName = "Rudra"
 let emailIsValid = true;
@@ -12,3 +12,21 @@ console.table([typeof num,typeof myName,typeof emailIsValid,typeof gender ,typeo
 
 
 
+//Non primitive datatypes(call by reference)
+
+// Array , Object , Function
+
+let cricketers = ["Virat" , "MSD" , "Rahul" , "Jadeja"]; //returns object
+
+let person = {
+    pName : "Rudra",
+    age : 21,
+    role: "Student",
+    isBest: true
+}                  //returns object
+
+let adder = function(a,b) {
+    console.log(a+b);
+}               //returns function object
+
+console.table([typeof cricketers, typeof person , typeof adder]);

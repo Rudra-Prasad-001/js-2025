@@ -35,5 +35,5 @@ let isNull = null
 console.log(Number(isNull));
 // console.table([Boolean(isNull), String(isNull), Null(isNull), Symbol(isNull)]); //gives error
 
-console.table([Boolean(undefined), Boolean(0), Boolean(1), Boolean(NaN), Boolean(40) , Boolean(02)]);
+console.table([Boolean(undefined), Boolean(0), Boolean(1), Boolean(NaN), Boolean(40) , Boolean(null), Boolean()]);
 
