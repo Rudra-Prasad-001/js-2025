@@ -30,3 +30,28 @@ let adder = function(a,b) {
 }               //returns function object
 
 console.table([typeof cricketers, typeof person , typeof adder]);
+
+
+//Stack and Heap memory in js
+
+let myNum1 = 35;
+let myNum2 = myNum1; 
+
+myNum2 = 25; //myNum1 will remain 35 but myNum2 changes to 25 (Primitive data use stack)
+
+console.table([myNum1,myNum2]); 
+
+let obj1 = {
+    name : "Legend",
+    age : 21,
+    isBest: false
+}
+
+let obj2 = obj1; //Both refers to same memory location(reference)
+
+obj2.name = "Rudra"; //This will also change obj1 name since it refers to same memory location(it uses heap)
+
+console.table([obj1 , obj2]);
+
+
+
