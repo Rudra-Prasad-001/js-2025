@@ -23,3 +23,12 @@ str = "  Raj  "
 modifiedStr = str.trim()
 
 console.log(modifiedStr);
+
+let myName = "Rudra Prasad Pati"
+
+let myNameArray = myName.split(' ',2); //Separator and limiter(by default limiter covers total string)
+
+console.log(myNameArray);
+
+console.table([myName.lastIndexOf('ra'), myName.indexOf('ra'), myName.slice(0,5), myName, myName.replace('ra','RA'), myName , myName.replaceAll(/[A-Z]/g , 'r'), myName]); //Note always use g(global) flag when use replaceAll or matchAll method
+ 
