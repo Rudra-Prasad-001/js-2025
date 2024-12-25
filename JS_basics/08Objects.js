@@ -1,10 +1,48 @@
 //Two ways of declaring objects
 //1. Object constructors (produces #singleton)
+let sym = Symbol('key2');
+const singletonObj = new Object();
 
+singletonObj.email = 'something@gmail.com';
+singletonObj.phoneNumber = '9861081029';
+singletonObj.name = 'Rudra';
+singletonObj[sym] = 'yes';
+singletonObj.greeting = function() {
+    console.log(`Welcome dear user, ${this.name}`);
+}
+
+// console.log(singletonObj);
+
+const anotherSingletonObj = new Object();
+
+anotherSingletonObj.email = 'kuchbhi@gmail.com';
+anotherSingletonObj.phoneNumber = '9861906899';
+anotherSingletonObj.name = 'Legend';
+anotherSingletonObj[sym] = 'no';
+anotherSingletonObj.birthDate = (new Date("2003-02-22")).toDateString();
+
+//Merge two objects (there are two methods)
+
+//Method1
+
+let objArb = Object.assign({},singletonObj,anotherSingletonObj); //This will override the keys of first object which are same in second object
+
+// console.log(objArb);
+
+//Method 2
+
+let objSpread = {...singletonObj, ...anotherSingletonObj};
+
+console.log(objSpread);
+
+console.log(objSpread.hasOwnProperty('email'));
+
+console.log(Object.keys(objSpread)); //op: array of keys
+console.log(Object.values(objSpread)); // op: array of values
 
 //2.Using object literals
 
-let sym = Symbol('key1');
+sym = Symbol('key1');
 
 const person = {
     name: "Rudra",
@@ -40,7 +78,3 @@ Object.freeze(person); //It locks the person i.e further modification can't be d
 person.age = 21; //Can't be assigned since object is freezed or locked
 
 console.log(person);
-
-
-
-
