@@ -25,6 +25,31 @@ console.log(arr2);
 let arr3 = arr1.concat(arr2);
 console.log(arr3);
 
+const rivers = ['Ganga' , 'Yamuna' , 'Saraswati' , 'kaveri', 'Godavari'];
+
+const oceans = ['Indian', 'Pacific', 'Atlantic' , 'Arctic', 'Antractic'];
+
+const seas = ['Arabian' , 'Bay of Bengol', 'Lakhswadeep', 'Sri Lankan'];
+//Concatenation of arrays using spread operator(it spreads the elements i.e contains within this)
+const allWaterBodies = [...rivers, ...seas, ...oceans];
+
+console.log(allWaterBodies);
+
+let num = Array.of(1,2,3); //similar to Array.form()
+
+console.log(num);
+
+console.log(num.find(elem => elem > 1));
+
+console.log(num.findIndex(elem => elem > 1));
+
+console.log(num.indexOf(9));
+
+console.log(num.indexOf(3));
+
+
+
+
 
 
 
