@@ -78,3 +78,20 @@ Object.freeze(person); //It locks the person i.e further modification can't be d
 person.age = 21; //Can't be assigned since object is freezed or locked
 
 console.log(person);
+
+//Object de-structuring
+
+let brandInfo = {
+    brandName : 'Tata',
+    brandReputation : 'High',
+    isIndian : true,
+    brandValuation : 999999999999
+}
+
+const {brandName: bName} = brandInfo;
+
+console.log(bName) //No need to use . or []
+
+const {brandReputation: Rep, brandValuation: value} = brandInfo;
+
+console.table([Rep , value]);
