@@ -32,5 +32,25 @@ const addThreeCheckMulThree =nums
 console.log(addThreeCheckMulThree);
 
 
+// reduce() method
 
+const myShoppingCart = [
+    {item: "Thedhe Medhe",
+     price: 20
+    },
+
+    {item : "Coke",
+     price: 40
+    },
+    {item: "Ice cream",
+     price: 60
+    },
+    {item: "Hide & Seek",
+     price: 100
+    }
+]
+
+let myTotal = myShoppingCart.reduce((acc, curval) =>acc + curval.price,0); 
+
+console.log(myTotal);
 
