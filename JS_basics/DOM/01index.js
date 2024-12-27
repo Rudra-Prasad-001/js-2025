@@ -16,3 +16,5 @@ body.appendChild(paraMain);
 
 console.log(body.children);
 console.log(body.parentNode);
+
+console.log(paraMain.nextSibling);
