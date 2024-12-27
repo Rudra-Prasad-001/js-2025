@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM add , edit and remove element</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const heading = document.createElement('h1');
+    heading.setAttribute('class','primary-heading heading');
+    heading.textContent = "Top 5 most popular programming language in 2025";
+    
+    document.querySelector('body').appendChild(heading);
+
+    heading.style.color = "purple";
+
+    const ul = document.createElement('ul');
+
+    document.querySelector('body').appendChild(ul);
+ //Adding new element
+    function addLang(langName) {
+        const li = document.createElement('li');
+        li.innerText = `${langName}`;
+        li.style.color = 'green';
+        li.style.fontSize = 'large';
+        li.style.fontWeight = '600';
+        li.style.marginBottom = '2px';
+        li.style.padding = '2px';
+        ul.appendChild(li);
+    }
+
+    // addLang("Kotlin");
+
+    const langArr = ['Java Script' , 'Python' , 'Cpp', 'Ruby', 'Java'];
+
+    langArr.map((lang) => addLang(lang));
+
+    //Edit element
+    //Lets replace Java Script with Type Script
+    ul.querySelector('li:first-child').innerText = 'Type Script';
+   // Replace Python With Mojo
+   const secondLang = ul.querySelector('li:nth-child(2)');
+
+   const mojo = document.createElement('li')
+   mojo.innerText = 'Mojo'
+
+   secondLang.replaceWith(mojo);
+
+   //delete the last element
+
+   ul.removeChild(ul.querySelector('li:last-child'));
+
+   //And some magic
+   heading.textContent = `Top ${ul.childElementCount} most popular programming language in ${new Date().getFullYear()}`
+    
+</script>
+</html>
