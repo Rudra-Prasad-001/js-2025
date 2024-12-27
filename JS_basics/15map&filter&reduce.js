@@ -14,6 +14,23 @@ console.log(prices);
 let dividedByThree = prices.map((num) =>{       return Number((num / 3).toFixed(1))
 });
 
-console.log(dividedByThree);
+// console.log(dividedByThree);
+
+
+let nums = [5,10,15,20,25,30,33];
+
+const multipleOfTen = nums.filter((num) => num % 10 === 0);
+
+console.log(multipleOfTen);
+
+//chaining of functions 
+
+const addThreeCheckMulThree =nums
+                                .map((num) => num +3)
+                                .filter((num) => num % 3 === 0);
+
+console.log(addThreeCheckMulThree);
+
+
 
 
