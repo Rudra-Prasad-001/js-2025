@@ -52,8 +52,9 @@ const users = [{name: "Rudra" , age: 21},
                {name: "Abinash" , age:21},
                {name: "Somyajeet", age:20}] 
 
-for (const key in users) {
-    console.log(`${users[key].name} is ${users[key].age} years old`);
+//Remember users is a array
+for (const index in users) {
+    console.log(`${users[index].name} is ${users[index].age} years old`);
 }
 
 
